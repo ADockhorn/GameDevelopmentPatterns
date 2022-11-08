@@ -86,7 +86,8 @@ public class SimpleSpawner : MonoBehaviour
         go.transform.parent = transform;
 
         // get a random color from our singleton
-        go.GetComponent<SpriteRenderer>().color = Singleton.Instance.getColor();
+        if (Singleton.Instance != null)
+            go.GetComponent<SpriteRenderer>().color = Singleton.Instance.getColor();
     }
 
     void DestroyObject(int destroyIndex)

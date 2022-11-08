@@ -127,7 +127,8 @@ public class ObjectPool : MonoBehaviour
         Debug.DrawLine(prevPosition, currentGo.transform.position, Color.red, cooldown);
 
         // get a random color from our singleton
-        currentGo.GetComponent<SpriteRenderer>().color = Singleton.Instance.getColor();
+        if (Singleton.Instance != null)
+            currentGo.GetComponent<SpriteRenderer>().color = Singleton.Instance.getColor();
 
         // increase active objects counter
         nrOfActiveObjects += 1;
