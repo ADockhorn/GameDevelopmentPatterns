@@ -82,8 +82,8 @@ public class SimpleSpawner : MonoBehaviour
     {
         // create a new object, position it randomly and assign its parent transform to the spawner
         var go = Instantiate<GameObject>(objectPrefab);
-        go.transform.position = new Vector3(Random.Range(-3f, 3f), Random.RandomRange(-3f, 3f), 0);
         go.transform.parent = transform;
+        go.transform.localPosition = new Vector3(Random.Range(-3f, 3f), Random.RandomRange(-3f, 3f), 0);
 
         // get a random color from our singleton
         if (Singleton.Instance != null)

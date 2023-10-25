@@ -16,7 +16,7 @@ public class Singleton : MonoBehaviour
         // Note, we don't delete the game object, since the component might be attached next to other components
         if (Instance != null && Instance != this)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
         else
         {

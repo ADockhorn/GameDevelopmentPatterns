@@ -123,7 +123,7 @@ public class ObjectPool : MonoBehaviour
         // set a new random position
         // draw debug line starting from the previous position to the new one
         var prevPosition = currentGo.transform.position;
-        currentGo.transform.position = new Vector3(Random.Range(-3f, 3f), Random.RandomRange(-3f, 3f), 0);
+        currentGo.transform.localPosition = new Vector3(Random.Range(-3f, 3f), Random.RandomRange(-3f, 3f), 0);
         Debug.DrawLine(prevPosition, currentGo.transform.position, Color.red, cooldown);
 
         // get a random color from our singleton
